@@ -47,9 +47,9 @@ jobs:
           script: |
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/my_name_website:v1
 
-            docker stop my-website || true
+            docker stop mycont || true
 
-            docker rm my-website || true
+            docker rm mycont || true
 
             docker run -d \
               --name mycont \
